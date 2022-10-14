@@ -20,17 +20,60 @@
     <header>
         <%- include('./partials/header'); %>
     </header>
- <div class="ui segment">
-    <div style="margin-top: 0.05%;">
-        <div style="margin-left:0.1%;"> <strong> PROCESS NAME </strong> : <%= bdy.procn %> </div>
-        <div style="margin-top:-1.70% ;margin-left:55%;"> <strong> CHECK LOCATION </strong> : <%= bdy.chnloc %> </div> 
-    </div>
-    <div class="line"></div>
+    <div class="ui segment">
+        <div style="margin-top: 0.05%;">
+            <div style="margin-left:0.1%;"> <strong> PROCESS NAME </strong> : <%= bdy.procn %> </div>
+            <div style="margin-top:-1.70% ;margin-left:55%;"> <strong> CHECK LOCATION </strong> : <%= bdy.chnloc %> </div> 
+        </div>
+        <div class="line"></div>
+        <div>
+            <h5>CHECK DETAILS</h5>
+            <p style="margin-top:-1.10% ;"><%= chndta %> </p>
+        </div>
+        <div class="line"></div>
+        <div class="ui three column divided grid">
+            <div class="stretched row">
+                <div class="column" style="border-right: 1px solid #707070; ;">
+                    <strong style="margin-top:-1em">REFERENCE DIAGRAM</strong>
+                    <div class="ui placeholder segment" style="height: 30em; width: 27.5em; border : none">
+                        <div class="ui icon header">
+                        IMAGE AREA
+                        </div>
+                    </div>
+                </div>
+                <div class="column" style="height: 32em;width: 57.5em; border-top: none">
+                    <strong style="margin-top:-1em">MARK YOUR QUALITY CHECK RESULT HERE</strong>
+                    <div class="ui right aligned grid">
+                        <div class="left floated right aligned six wide column">
+                            <div class="ui segment" style="width:25em; height:8em;">
+                                LABEL 1
+                            </div>
+                        </div>
+                        <div class="right floated left aligned six wide column">
+                            <div class="ui segment" style="margin-left:-5.5em; width:25em; height:8em;">
+                                LABEL 2
+                            </div>
+                        </div>
 
- </div>
-<footer >
-    <%- include('./partials/footer'); -%> 
-</footer>
+                        <div class="sixteen wide column">
+                            <div class="ui segment" style="height: 8em;">
+                                COMMENTS
+                            </div>
+                        </div>
+
+                        <div class="sixteen wide column">
+                            <div class="ui segment" style="height: 8em;">
+                                JUDGEMENT
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+   
 
 </body> 
 </html>
