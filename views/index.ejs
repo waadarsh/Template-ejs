@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<body lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>EJS Template</title>
+
+   <!-- CSS link (loading Semantic UI from a CDN) -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <style>
+     body { padding:2%; }
+   </style>
+</head>
+<body class="container">
+    <header>
+        <%- include('./partials/header'); %>
+    </header>
+ <div class="ui segment">
+    <div style="margin-top: 0.05%;">
+        <div style="margin-left:0.1%;"> <strong> PROCESS NAME </strong> : <%= bdy.procn %> </div>
+        <div style="margin-top:-1.75% ;margin-left:55%;"> <strong> CHECK LOCATION </strong> : <%= bdy.chnloc %> </div> 
+    </div>
+
+ </div>
+<footer >
+    <%- include('./partials/footer'); -%> 
+</footer>
+
+</body> 
+</html>
