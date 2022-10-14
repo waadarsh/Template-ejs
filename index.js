@@ -20,11 +20,13 @@ app.get('/', (req, res) => {
         chnloc : 'Lorem'
     }
 
+    var chkdta = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ";
 
 
     res.render('index', {
         hdr : hdr,
-        bdy : bdy
+        bdy : bdy,
+        chndta : chkdta
 
     });
 });
