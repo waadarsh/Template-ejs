@@ -4,8 +4,8 @@ app = express();
 app.listen(3000);
 console.log('Listening on port 3000');
 
+app.use("/static", express.static("static"));
 app.set("view engine", "ejs");
-
 app.get('/', (req, res) => {
 
     var hdr = {
