@@ -1,4 +1,14 @@
 <div class="ui menu" style="background-color: #797979; color : #FFFFFF">
-      <div style="margin-top: 0.75%; margin-left:1%;"> <strong> <%= hdr.templn %> | <%= hdr.station %> </strong>  </div>
-      <div  style="margin-top: 0.75%; margin-left:80%;"> <strong> <%= hdr.currno %>/<%= hdr.totno %> </strong>  </div>  
+      <div style="margin-top: 0.75%; margin-left:1%;"> 
+            <% if(template_data.length) { %>
+                  <% template_data.forEach(function(template) { %>
+            <strong> <%= template.chklst_name %> | <%= template.station_name %> </strong>  
+            </div>
+            <div  style="margin-top: 0.75%; margin-left:70%;"> 
+            <strong> <%= 1 %> / <%= template.total_no_instruction %> </strong>  
+                  <% }) %>
+            <% } else { %>
+                No templates available!!!!
+            <% } %>
+      </div>  
 </div>
