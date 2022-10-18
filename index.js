@@ -22,14 +22,17 @@ app.use(bodyParser.text());
 
 app.use("/static", express.static("static"));
 app.set("view engine", "ejs");
+
+// function getData(t) {
+//     return t.map('SELECT * FROM chklst_hdr WHERE status_code = 90',)
+// }
+
 app.get('/', (req, res) => {
 
-    var hdr = {
-        templn : 'TEMPLATE NAME',
-        station : 'STATION',
-        currno :  1,
-        totno : 1
-    }
+//     // var hdr = {
+//     //     templn : 'TEMPLATE NAME',
+//     //     station : 'STATION',
+//     // }
 
     var bdy = {
         procn : 'Lorem',
@@ -41,12 +44,14 @@ app.get('/', (req, res) => {
     db.any("SELECT chklst_id,chklst_name,station_name,total_no_instruction FROM chklst_hdr WHERE status_code = 90;")
     .then((data) => {
         template_data=data;
-         res.render("index", template_data);////{
+         res.render("index", template_data);
+        //res.send(template_data);
+        ////{
         //     // data : data,
         //     // hdr : hdr,
         //     // bdy : bdy,
         //     // chndta : chkdta
-        // });
+        //// });
     }).catch(error => res.send(error));
 });
 
